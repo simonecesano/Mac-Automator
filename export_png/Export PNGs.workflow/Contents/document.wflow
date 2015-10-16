@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	tell application "Adobe Illustrator"		set p to file path of current document		set p to POSIX path of p		set s to items of selection		if not s = {} then			set t to 0			set selection to {}			repeat with i from 1 to count of s				set j to item i of s				set selected of j to true				copy				set selected of j to false				do shell script "perl \"/Users/cesansim/Library/Services/Export PNGs.workflow/Contents/export_png.pl\" \"" &amp; p &amp; "\" " &amp; i &amp; " &amp;"			end repeat		end if	end tellend run</string>
+					<string>set lib to POSIX path of (path to library folder from user domain)tell application "Adobe Illustrator"	set p to file path of current document	set p to POSIX path of p	set s to items of selection	if not s = {} then		set t to 0		set selection to {}		repeat with i from 1 to count of s			set j to item i of s			set selected of j to true			copy			set selected of j to false			do shell script "perl \"" &amp; lib &amp; "/Services/Export PNGs.workflow/Contents/export_png.pl\" \"" &amp; p &amp; "\" " &amp; i &amp; " &amp;"		end repeat	end ifend tell</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>556.500000:467.000000</string>
+				<string>556.500000:647.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
