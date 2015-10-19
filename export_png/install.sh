@@ -1,4 +1,4 @@
 cd ~/Library/Services/
-curl -L https://github.com/simonecesano/Mac-Automator/raw/master/export_png/export_png.zip > export_png.zip
-unzip -o export_png.zip
-rm export_png.zip
+curl -L https://github.com/simonecesano/Mac-Automator/raw/master/export_png/export_pngs.zip > export_pngs.zip
+unzip -o export_pngs.zip
+rm export_pngs.zip
